@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/bootstrap.css">
+</head>
+<body>
+<h1>user details</h1>
+<div>
+	<table class="table table-hover border" >
+		<tr>
+			<th>NAME</th>
+			<th>EMAIL</th>
+			<th>PHONE NUMBER</th>
+			<th>ADDRESS</th>
+			<th>PINCODE</th>
+			<th>DELETE</th>
+			<th>EDIT</th>
+		</tr>
+		<tr>
+			<th th:text="${{userlist.name}}"></th>
+			<th th:text="${{userlist.email}}"></th>
+			<th th:text="${{userlist.phonenumber}}"></th>
+			<th th:text="${{userlist.address}}"></th>
+			<th th:text="${{userlist.pincode}}"></th>
+			<th>
+				<form action="/deletedetails">
+				<input type="submit" name="name" value="delete" class="btn btn-danger">
+				</form>
+			</th>
+			<th>
+				<a href="/updatedetails.html"><input type="button" value="EDIT" class="btn btn-danger"></a>
+			</th>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
