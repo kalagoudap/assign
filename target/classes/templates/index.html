@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/bootstrap.css">
+</head>
+<body>
+	<div class="card shadow offset-4 mt-5 mb-5" style="width: 500px; height: 380px; font-family: -webkit-body; font-size: 1.1rem;">
+    <div class="card-header">
+        <span>LOGIN FORM</span>
+    </div>
+    <div class="card-body">
+        <form class="form-group"  method="POST" action="/login" th:object="${Userdto}">
+            
+            <div class="mt-2 ml-2">
+                <label for="Username">NAME/EMAIL</label>
+                <input class="form-control col-10" type="text" name="email" placeholder="FullName/email" >
+            </div>
+            
+            <div class="mt-3 ml-2">
+                <label for="password">PHONENUMBER</label>
+                <input class="form-control col-10" type="number" name="phonenumber" placeholder="PhoneNumber" >
+            </div>
+            <div class="p-2 mt-3">
+                <input class="btn btn-outline-success p-2" type="submit" name="submit" value="SUBMIT" style="width: 130px;" >
+                <input class="btn btn-outline-danger p-2"  name="clear" value="CLEAR" style="width: 130px;">
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">   
+           <a class="ml-4" href="/registration.html"><input class="btn btn-primary" type="button" name="sign-up" value="Sign-Up" style="width: 400px;"> </a>
+     </div>   
+</div>
+</body>
+</html>
